@@ -1,0 +1,34 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Controller for Stratego
+
+GET     /                                   controllers.HomeController.index
+
+GET     /stratego                           controllers.HomeController.stratego
+
+GET     /menu                               controllers.HomeController.menu
+
+GET     /load                               controllers.HomeController.load
+
+GET     /save                               controllers.HomeController.save
+
+GET     /undo                               controllers.HomeController.undo
+
+GET     /redo                               controllers.HomeController.redo
+
+GET     /players                            controllers.HomeController.setPlayers(player1: String, player2: String)
+
+GET     /setPlayers/:player1/:player2       controllers.HomeController.setPlayers(player1: String, player2: String)
+
+GET     /setFigure/:row/:col/:figure        controllers.HomeController.setFigure(row: String, col: String, figure: String)
+
+POST    /move                               controllers.HomeController.move
+
+GET     /json                               controllers.HomeController.gameToJson
+
+GET     /websocket                          controllers.HomeController.socket
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
