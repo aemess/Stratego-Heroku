@@ -65,7 +65,7 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit system: Actor
 
   def setFigure(row: String, col: String, figure: String): Action[AnyContent] = Action {
     gameController.set(row.toInt,col.toInt, figure)
-    Ok(gameController.getSize.toString)
+    Ok(views.html.matchfield(gameController))
   }
 
   def move: Action[JsValue] = Action(parse.json) {
