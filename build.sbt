@@ -4,6 +4,9 @@ name := "stratego-backend"
 
 version := "5.0.0"
 
+herokuAppName in Compile := "stratego-backend"
+herokuJdkVersion in Compile := "1.8"
+
 scalaVersion := "2.12.7"
 
 resolvers += Resolver.sonatypeRepo("snapshots")
