@@ -1,6 +1,6 @@
 
 
-name := "play-silhouette-seed"
+name := "stratego-backend"
 
 version := "5.0.0"
 
